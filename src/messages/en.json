@@ -1,0 +1,834 @@
+{
+  "common": {
+    "appName": "TriFuel",
+    "loading": "Loading…",
+    "error": "Something went wrong. Please try again.",
+    "backToHome": "Back to home",
+    "time": {
+      "never": "Never",
+      "justNow": "Just now",
+      "minutesAgo": "{n}m ago",
+      "hoursAgo": "{n}h ago",
+      "daysAgo": "{n}d ago"
+    }
+  },
+  "meta": {
+    "title": "TriFuel — AI-powered triathlon training & nutrition",
+    "description": "Personalized training plans and vegan nutrition for triathletes."
+  },
+  "auth": {
+    "login": {
+      "title": "Sign in to TriFuel",
+      "subtitle": "Welcome back, athlete",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "submitButton": "Sign in",
+      "submitting": "Signing in…",
+      "forgotPassword": "Forgot password?",
+      "noAccount": "Don't have an account?",
+      "signupLink": "Sign up",
+      "orContinueWith": "Or continue with",
+      "google": "Continue with Google",
+      "apple": "Continue with Apple",
+      "errors": {
+        "invalidCredentials": "Invalid email or password.",
+        "emailRequired": "Email is required.",
+        "passwordRequired": "Password is required.",
+        "tooManyAttempts": "Too many sign-in attempts. Please wait a minute and try again."
+      }
+    },
+    "signup": {
+      "title": "Create your account",
+      "subtitle": "Start your triathlon journey",
+      "nameLabel": "Full name",
+      "namePlaceholder": "Jane Doe",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "At least 8 characters",
+      "confirmPasswordLabel": "Confirm password",
+      "confirmPasswordPlaceholder": "Repeat your password",
+      "submitButton": "Create account",
+      "submitting": "Creating account…",
+      "hasAccount": "Already have an account?",
+      "loginLink": "Sign in",
+      "terms": "By creating an account you agree to our",
+      "termsLink": "Terms of Service",
+      "and": "and",
+      "privacyLink": "Privacy Policy",
+      "errors": {
+        "nameRequired": "Name is required.",
+        "emailRequired": "Email is required.",
+        "emailInvalid": "Enter a valid email address.",
+        "passwordRequired": "Password is required.",
+        "passwordTooShort": "Password must be at least 8 characters.",
+        "passwordsDoNotMatch": "Passwords do not match.",
+        "emailTaken": "An account with this email already exists.",
+        "tooManyAttempts": "Too many sign-up attempts. Please wait and try again."
+      },
+      "success": "Account created! Please check your email to verify your address.",
+      "orContinueWith": "Or continue with",
+      "google": "Sign up with Google",
+      "apple": "Sign up with Apple"
+    },
+    "forgotPassword": {
+      "title": "Forgot your password?",
+      "subtitle": "Enter your email and we'll send you a reset link.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "submitButton": "Send reset link",
+      "submitting": "Sending…",
+      "backToLogin": "Back to sign in",
+      "errors": {
+        "emailRequired": "Email is required.",
+        "emailInvalid": "Enter a valid email address.",
+        "tooManyAttempts": "Too many requests. Please wait before trying again."
+      },
+      "success": "If an account with that email exists, we sent a reset link."
+    },
+    "resetPassword": {
+      "title": "Set a new password",
+      "subtitle": "Choose a strong password for your account.",
+      "passwordLabel": "New password",
+      "passwordPlaceholder": "At least 8 characters",
+      "confirmPasswordLabel": "Confirm new password",
+      "confirmPasswordPlaceholder": "Repeat your new password",
+      "submitButton": "Reset password",
+      "submitting": "Resetting…",
+      "errors": {
+        "passwordRequired": "Password is required.",
+        "passwordTooShort": "Password must be at least 8 characters.",
+        "passwordsDoNotMatch": "Passwords do not match.",
+        "tokenInvalid": "This reset link is invalid or has expired.",
+        "tokenRequired": "Reset token is missing. Please request a new link."
+      },
+      "success": "Password updated! You can now sign in with your new password.",
+      "successLink": "Go to sign in"
+    },
+    "verifyEmail": {
+      "title": "Verify your email",
+      "subtitle": "We sent a verification link to your email address.",
+      "checking": "Verifying your email…",
+      "resendButton": "Resend verification email",
+      "resending": "Sending…",
+      "backToLogin": "Back to sign in",
+      "errors": {
+        "tokenInvalid": "This verification link is invalid or has expired.",
+        "tokenRequired": "Verification token is missing.",
+        "alreadyVerified": "This email is already verified.",
+        "tooManyAttempts": "Too many attempts. Please request a new link."
+      },
+      "success": "Email verified! Your account is now active.",
+      "successLink": "Go to sign in"
+    }
+  },
+  "dashboard": {
+    "nutrition": {
+      "title": "Daily Nutrition",
+      "today": "Today",
+      "previousDay": "Previous day",
+      "nextDay": "Next day",
+      "macros": {
+        "carbs": "Carbs",
+        "protein": "Protein",
+        "fat": "Fat",
+        "calories": "Calories",
+        "of": "of",
+        "g": "g",
+        "kcal": "kcal"
+      },
+      "meals": {
+        "breakfast": "Breakfast",
+        "morning_snack": "Morning Snack",
+        "lunch": "Lunch",
+        "afternoon_snack": "Afternoon Snack",
+        "dinner": "Dinner",
+        "pre_workout": "Pre-Workout",
+        "intra_workout": "Intra-Workout",
+        "post_workout": "Post-Workout"
+      },
+      "mealCard": {
+        "addFood": "Add food",
+        "empty": "No foods logged yet",
+        "subtotal": "Subtotal",
+        "remove": "Remove"
+      },
+      "search": {
+        "title": "Add Food",
+        "placeholder": "Search foods…",
+        "recentTab": "Recent",
+        "frequentTab": "Frequent",
+        "noResults": "No foods found",
+        "scanBarcode": "Scan barcode",
+        "scanUnsupported": "Barcode scanning is not supported on this device",
+        "scanning": "Scanning…",
+        "scanError": "Could not read barcode. Try again.",
+        "addingTo": "Adding to {slot}",
+        "back": "Back"
+      },
+      "foodDetail": {
+        "macroBreakdown": "Macro Breakdown",
+        "micronutrients": "Micronutrients",
+        "servingSize": "Serving size",
+        "customServing": "Custom amount",
+        "addToMeal": "Add to {slot}",
+        "adding": "Adding…",
+        "added": "Added!",
+        "perServing": "per serving",
+        "nutrients": {
+          "calories": "Calories",
+          "carbs": "Carbs",
+          "protein": "Protein",
+          "fat": "Fat",
+          "fiber": "Fiber",
+          "sugar": "Sugar",
+          "b12": "Vitamin B12",
+          "iron": "Iron",
+          "zinc": "Zinc",
+          "omega3Ala": "Omega-3 ALA",
+          "omega3Epa": "Omega-3 EPA",
+          "omega3Dha": "Omega-3 DHA",
+          "calcium": "Calcium",
+          "vitaminD": "Vitamin D",
+          "leucine": "Leucine",
+          "vitaminC": "Vitamin C",
+          "magnesium": "Magnesium",
+          "potassium": "Potassium",
+          "folate": "Folate",
+          "iodine": "Iodine"
+        }
+      }
+    },
+    "nav": {
+      "home": "Home",
+      "training": "Training",
+      "nutrition": "Nutrition",
+      "hydration": "Hydration",
+      "analytics": "Analytics",
+      "settings": "Settings"
+    },
+    "home": {
+      "greeting": "Good {timeOfDay}",
+      "morning": "morning",
+      "afternoon": "afternoon",
+      "evening": "evening",
+      "todayWorkout": "Today's Workout",
+      "restDay": "Rest Day",
+      "restDayTip": "Recovery is where fitness is built. Rest, hydrate, and absorb the work.",
+      "start": "Start",
+      "noWorkout": "No sessions planned today.",
+      "nutrition": "Today's Nutrition",
+      "logFood": "Log Food",
+      "carbs": "Carbs",
+      "protein": "Protein",
+      "fat": "Fat",
+      "g": "g",
+      "of": "of",
+      "noTargets": "Complete onboarding to see nutrition targets.",
+      "hydration": "Hydration",
+      "addWater": "+250 ml",
+      "weekly": "This Week",
+      "recoveryWindow": "Recovery Window Open",
+      "recoveryWindowDesc": "Post-workout nutrition window — eat within 60 min of finishing.",
+      "suggestedMeal": "Suggested:",
+      "dismiss": "Dismiss",
+      "min": "min",
+      "completed": "Done",
+      "planned": "Planned",
+      "missed": "Missed",
+      "skipped": "Skipped",
+      "intensity": "Intensity",
+      "today": "Today",
+      "viewPlan": "View Plan",
+      "streakLabel": "week streak",
+      "ml": "ml"
+    },
+    "hydration": {
+      "title": "Hydration",
+      "subtitle": "Track your daily fluid intake",
+      "target": "Daily Target",
+      "logged": "Logged",
+      "remaining": "Remaining",
+      "progress": "{pct}% of target",
+      "quickAdd": "Quick Add",
+      "glass": "Glass",
+      "bottle": "Bottle",
+      "large": "Large",
+      "glassMl": "250 ml",
+      "bottleMl": "500 ml",
+      "largeMl": "750 ml",
+      "add": "Add",
+      "adding": "Adding…",
+      "logTitle": "Today's Log",
+      "noLogs": "No fluids logged yet. Use quick-add above to start.",
+      "remove": "Remove",
+      "electrolytes": "Electrolyte Targets",
+      "sodium": "Sodium",
+      "potassium": "Potassium",
+      "magnesium": "Magnesium",
+      "trainingDayNote": "Targets increased for training day",
+      "sessionGuidance": "Session Guidance",
+      "sessionGuidanceSubtitle": "Hydration tips for today's training sessions",
+      "water": "Water",
+      "electrolyte": "Electrolyte drink",
+      "other": "Other",
+      "typeLabel": "Type",
+      "ml": "ml",
+      "noSessions": "No training sessions today.",
+      "sessionPre": "Pre",
+      "sessionDuring": "During",
+      "sessionPost": "Post",
+      "sodiumTip": "Sodium: {mg} mg · Sip {sipMl} ml every {sipMin} min",
+      "sipTip": "Sip {sipMl} ml every {sipMin} min"
+    },
+    "analytics": {
+      "title": "Analytics",
+      "tabs": {
+        "performance": "Performance",
+        "training": "Training Load",
+        "nutrition": "Nutrition",
+        "body": "Body Comp"
+      },
+      "pmc": {
+        "title": "Performance Management Chart",
+        "subtitle": "12-week fitness, fatigue, and form trend",
+        "fitness": "Fitness (CTL)",
+        "fatigue": "Fatigue (ATL)",
+        "form": "Form (TSB)",
+        "fitnessDesc": "Chronic Training Load — your long-term fitness. Higher is generally better.",
+        "fatigueDesc": "Acute Training Load — recent training stress. High = tired.",
+        "formDesc": "Training Stress Balance (CTL − ATL). Positive = fresh, negative = fatigued.",
+        "tss": "Daily TSS",
+        "raceDay": "Race Day",
+        "noData": "Complete workouts with TSS data to see your performance chart."
+      },
+      "trainingLoad": {
+        "title": "Training Load by Discipline",
+        "subtitle": "Weekly hours",
+        "period": "Period",
+        "periods": {
+          "4w": "4 weeks",
+          "8w": "8 weeks",
+          "12w": "12 weeks",
+          "6m": "6 months",
+          "1y": "1 year"
+        },
+        "swim": "Swim",
+        "bike": "Bike",
+        "run": "Run",
+        "brick": "Brick",
+        "strength": "Strength",
+        "recovery": "Recovery",
+        "hours": "hrs",
+        "noData": "No training sessions found for this period."
+      },
+      "nutrition": {
+        "title": "Nutrition Analytics",
+        "macroChart": "Weekly Macro Averages vs. Targets",
+        "actual": "Actual",
+        "target": "Target",
+        "carbs": "Carbs",
+        "protein": "Protein",
+        "fat": "Fat",
+        "calories": "Calories",
+        "caloricBalance": "Caloric Balance (last 14 days)",
+        "intake": "Intake",
+        "expenditure": "Expenditure (training)",
+        "balance": "Balance",
+        "compliance": "Nutrition Compliance",
+        "complianceDesc": "Days within 10% of macro targets",
+        "noData": "Log foods to see nutrition analytics."
+      },
+      "body": {
+        "title": "Body Composition",
+        "weight": "Weight (kg)",
+        "bodyFat": "Body Fat (%)",
+        "addMeasurement": "Add Measurement",
+        "dateLabel": "Date",
+        "weightLabel": "Weight (kg)",
+        "fatLabel": "Body Fat %",
+        "save": "Save",
+        "saving": "Saving…",
+        "saved": "Saved!",
+        "cancel": "Cancel",
+        "noData": "No measurements recorded. Add your first measurement to start tracking."
+      }
+    },
+    "settings": {
+      "title": "Settings",
+      "devices": {
+        "title": "Connected Devices",
+        "subtitle": "Connect your Garmin, Wahoo, or COROS device to automatically import workouts.",
+        "providers": {
+          "garmin": "Garmin",
+          "garminDesc": "Forerunner, Fenix, Edge & more — OAuth 1.0a",
+          "wahoo": "Wahoo",
+          "wahooDesc": "ELEMNT, Bolt & KICKR",
+          "coros": "COROS",
+          "corosDesc": "PACE, APEX & VERTIX"
+        },
+        "connected": "Connected",
+        "notConnected": "Not connected",
+        "lastSync": "Last sync",
+        "never": "Never",
+        "connect": "Connect",
+        "disconnect": "Disconnect",
+        "disconnecting": "Disconnecting…",
+        "syncNow": "Sync now",
+        "syncing": "Syncing…",
+        "syncDone": "{n} activities synced",
+        "syncNone": "Already up to date",
+        "connectError": "Could not connect. Please try again.",
+        "disconnectError": "Could not disconnect. Please try again.",
+        "syncError": "Sync failed. Please try again.",
+        "pushUnsupported": "Workout push not supported by this provider.",
+        "garminNote": "Garmin syncs automatically via webhook when you complete an activity.",
+        "corosNote": "Workout push is not supported by the COROS Open Platform.",
+        "connectedSuccess": "Device connected successfully.",
+        "id": "ID",
+        "activitiesSynced": "{n} {n, plural, one {activity} other {activities}} synced"
+      },
+      "subscription": {
+        "title": "Subscription",
+        "currentPlan": "Current plan",
+        "freePlan": "Free",
+        "premiumPlan": "Premium",
+        "status": {
+          "active": "Active",
+          "trialing": "Trial",
+          "past_due": "Past due",
+          "cancelled": "Cancelled",
+          "incomplete": "Incomplete"
+        },
+        "periodEnd": "Renews on",
+        "noPeriodEnd": "—",
+        "upgrade": "Upgrade to Premium",
+        "managePortal": "Manage subscription",
+        "openingPortal": "Opening portal…",
+        "upgradedBanner": "Welcome to Premium! Your account has been upgraded.",
+        "cancelledBanner": "Your subscription has been cancelled.",
+        "benefits": [
+          "Adaptive AI replanning",
+          "Wearable auto-sync (Garmin, Wahoo, COROS)",
+          "Full micronutrient panel",
+          "AI meal suggestions & templates",
+          "During-session fueling guide",
+          "Performance Management Chart",
+          "Training load & nutrition analytics",
+          "Body composition trends"
+        ],
+        "trialNote": "7-day free trial · Cancel anytime"
+      },
+      "nav": {
+        "subscription": "Subscription",
+        "devices": "Devices"
+      }
+    },
+    "training": {
+      "title": "Training Calendar",
+      "monthView": "Month",
+      "weekView": "Week",
+      "today": "Today",
+      "previousPeriod": "Previous",
+      "nextPeriod": "Next",
+      "noSessions": "No sessions scheduled",
+      "disciplines": {
+        "swim": "Swim",
+        "bike": "Bike",
+        "run": "Run",
+        "brick": "Brick",
+        "strength": "Strength",
+        "recovery": "Recovery"
+      },
+      "zones": {
+        "z1": "Z1",
+        "z2": "Z2",
+        "z3": "Z3",
+        "z4": "Z4",
+        "z5": "Z5",
+        "z6": "Z6"
+      },
+      "zoneLabels": {
+        "z1": "Recovery",
+        "z2": "Aerobic",
+        "z3": "Tempo",
+        "z4": "Threshold",
+        "z5": "VO2 Max",
+        "z6": "Anaerobic"
+      },
+      "sessionStatus": {
+        "planned": "Planned",
+        "completed": "Completed",
+        "missed": "Missed",
+        "skipped": "Skipped"
+      },
+      "dragHint": "Drag to reschedule (Premium)",
+      "dragDisabled": "Upgrade to Premium to reschedule sessions",
+      "rescheduleError": "Failed to reschedule session. Please try again.",
+      "months": {
+        "0": "January",
+        "1": "February",
+        "2": "March",
+        "3": "April",
+        "4": "May",
+        "5": "June",
+        "6": "July",
+        "7": "August",
+        "8": "September",
+        "9": "October",
+        "10": "November",
+        "11": "December"
+      },
+      "weekDays": {
+        "mon": "Mon",
+        "tue": "Tue",
+        "wed": "Wed",
+        "thu": "Thu",
+        "fri": "Fri",
+        "sat": "Sat",
+        "sun": "Sun"
+      },
+      "weekDaysFull": {
+        "mon": "Monday",
+        "tue": "Tuesday",
+        "wed": "Wednesday",
+        "thu": "Thursday",
+        "fri": "Friday",
+        "sat": "Saturday",
+        "sun": "Sunday"
+      },
+      "detail": {
+        "backToCalendar": "Back to calendar",
+        "plannedTitle": "Workout Plan",
+        "completedTitle": "Workout Summary",
+        "duration": "Duration",
+        "minutes": "min",
+        "intensityZone": "Intensity Zone",
+        "objective": "Objective",
+        "intervalStructure": "Interval Structure",
+        "intervals": {
+          "reps": "reps",
+          "rest": "rest",
+          "target": "Target"
+        },
+        "nutritionTip": "Pre-Workout Nutrition",
+        "nutritionTips": {
+          "swim": "Have a light, easily digestible meal 1–2 hours before. Banana + nut butter oatmeal works well. Avoid high-fiber foods.",
+          "bike": "Top up carbohydrates 2–3 hours before. Aim for 1–2 g/kg bodyweight. Keep a gel or bar for sessions over 60 minutes.",
+          "run": "Stick to familiar foods. 1–2 g/kg carbs 2 hours before. Avoid high-fat and high-fiber foods race morning.",
+          "brick": "Treat like a long bike session. Pre-load carbs 2–3 hours before. Pack nutrition for the bike leg.",
+          "strength": "Moderate protein + carbs 1–2 hours before. Post-session: 20–30 g protein within 30 minutes.",
+          "recovery": "Keep it light. Focus on hydration and anti-inflammatory foods like berries and leafy greens."
+        },
+        "pushToDevice": "Send to Device",
+        "pushToDeviceHint": "Sends this workout to your connected Garmin, Wahoo, or COROS device.",
+        "pushSuccess": "Workout sent to device!",
+        "rpeLabel": "How hard was it? (RPE)",
+        "rpeSaving": "Saving…",
+        "rpeSaved": "Saved",
+        "rpeScale": {
+          "1": "Very easy",
+          "3": "Easy",
+          "5": "Moderate",
+          "7": "Hard",
+          "9": "Very hard",
+          "10": "Max effort"
+        },
+        "comparison": {
+          "title": "Planned vs. Actual",
+          "planned": "Planned",
+          "actual": "Actual",
+          "duration": "Duration (min)",
+          "hr": "Avg HR (bpm)",
+          "power": "Avg Power (W)",
+          "pace": "Avg Pace"
+        },
+        "recoveryMeal": "Recovery Meal Suggestion",
+        "recoveryMeals": {
+          "swim": "Smoothie bowl with mixed berries, banana, hemp seeds, and fortified oat milk. High in carbs to replenish glycogen, omega-3 from hemp seeds.",
+          "bike": "Brown rice bowl with edamame, roasted sweet potato, avocado, and tahini drizzle. Balanced carbs + healthy fats + plant protein.",
+          "run": "Lentil pasta with tomato sauce, nutritional yeast, and steamed broccoli. Rich in iron, zinc, and complex carbs.",
+          "brick": "Quinoa bowl with black beans, mango, lime, cilantro, and pumpkin seeds. Complete amino acids + fast and slow carbs.",
+          "strength": "Tofu scramble with tempeh, spinach, turmeric, and whole grain toast. High protein + anti-inflammatory compounds.",
+          "recovery": "Chia pudding with coconut milk, kiwi, and walnuts. Light on the gut, rich in omega-3 and antioxidants."
+        },
+        "notes": "Notes",
+        "notesPlaceholder": "Add a note about this session…",
+        "saveNotes": "Save notes"
+      },
+      "fitImport": {
+        "buttonLabel": "Import .FIT",
+        "title": "Import .FIT Files",
+        "subtitle": "Upload Garmin .FIT activity files to record workouts",
+        "dropzone": "Drop .FIT files here or click to browse",
+        "dropzoneActive": "Drop to import",
+        "browse": "Browse files",
+        "importButton": "Import {n} file(s)",
+        "importing": "Importing…",
+        "cancel": "Cancel",
+        "done": "Done",
+        "clearFiles": "Clear pending",
+        "outcomes": {
+          "matched": "Matched planned session",
+          "created": "Recorded as new activity",
+          "duplicate": "Already recorded",
+          "no_plan": "No active plan"
+        },
+        "fileStatus": {
+          "pending": "Pending",
+          "uploading": "Importing…",
+          "ok": "Imported",
+          "parse_error": "Error",
+          "empty": "No sessions"
+        },
+        "summary": "{matched} matched · {created} new · {duplicates} duplicates · {errors} errors",
+        "fileTooLarge": "File exceeds 10 MB limit",
+        "wrongFormat": "Not a .FIT file"
+      }
+    }
+  },
+  "onboarding": {
+    "progress": "Step {current} of {total}",
+    "next": "Continue",
+    "back": "Back",
+    "skip": "Skip for now",
+    "saving": "Saving…",
+    "steps": {
+      "welcome": "Welcome",
+      "athleteProfile": "Your Profile",
+      "dietPreferences": "Diet",
+      "trainingBackground": "Training",
+      "raceGoal": "Race Goal",
+      "weeklyAvailability": "Schedule",
+      "wearables": "Connect Device",
+      "planGenerated": "Your Plan"
+    },
+    "step1": {
+      "title": "Welcome to TriFuel",
+      "subtitle": "Your AI-powered triathlon training and nutrition platform.",
+      "intro": "We'll set up your personalized plan in just a few minutes. Answer 7 quick questions and we'll generate a training plan tailored to your race goal, fitness level, and diet.",
+      "features": [
+        "Personalized training plans for sprint to Ironman",
+        "Vegan-first nutrition with micronutrient tracking",
+        "Sync with Garmin, Wahoo & COROS",
+        "AI-adjusted weekly load based on your recovery"
+      ],
+      "cta": "Let's get started"
+    },
+    "step2": {
+      "title": "Tell us about yourself",
+      "subtitle": "We use this to calculate accurate nutrition targets and training zones.",
+      "weightLabel": "Body weight",
+      "weightUnit": "kg",
+      "weightUnitImperial": "lbs",
+      "heightLabel": "Height",
+      "heightUnit": "cm",
+      "heightUnitImperial": "in",
+      "dobLabel": "Date of birth",
+      "sexLabel": "Biological sex",
+      "sexOptions": {
+        "male": "Male",
+        "female": "Female",
+        "other": "Prefer not to say"
+      },
+      "errors": {
+        "weightRequired": "Weight is required.",
+        "weightRange": "Weight must be between 30 and 250 kg.",
+        "heightRequired": "Height is required.",
+        "heightRange": "Height must be between 100 and 250 cm.",
+        "dobRequired": "Date of birth is required.",
+        "dobPast": "Date of birth must be in the past.",
+        "sexRequired": "Please select your biological sex."
+      }
+    },
+    "step3": {
+      "title": "How do you eat?",
+      "subtitle": "We'll tailor your nutrition plans to your diet. All plans are whole-food focused.",
+      "dietLabel": "Diet type",
+      "dietOptions": {
+        "vegan": "Vegan",
+        "veganDesc": "Plant-based, no animal products",
+        "vegetarian": "Vegetarian",
+        "vegetarianDesc": "No meat or fish",
+        "omnivore": "Omnivore",
+        "omnivoreDesc": "Everything in moderation"
+      },
+      "allergiesLabel": "Food allergies or intolerances",
+      "allergiesPlaceholder": "e.g. gluten, soy, nuts…",
+      "commonAllergies": ["Gluten", "Soy", "Nuts", "Dairy", "Eggs", "Shellfish", "Sesame"],
+      "errors": {
+        "dietRequired": "Please select your diet type."
+      }
+    },
+    "step4": {
+      "title": "Your training background",
+      "subtitle": "Help us calibrate your starting fitness level.",
+      "experienceLabel": "Experience level",
+      "experienceOptions": {
+        "beginner": "Beginner",
+        "beginnerDesc": "New to triathlon, <1 year",
+        "intermediate": "Intermediate",
+        "intermediateDesc": "1–3 years, completed a sprint or Olympic",
+        "advanced": "Advanced",
+        "advancedDesc": "3–6 years, completed a half Ironman",
+        "elite": "Elite",
+        "eliteDesc": "6+ years, competitive racer"
+      },
+      "weeklyHoursLabel": "Current weekly training hours",
+      "weeklyHoursUnit": "hrs/week",
+      "recentTimesLabel": "Recent race times (optional)",
+      "recentTimesHint": "Leave blank if you don't have recent data.",
+      "swimPaceLabel": "Swim pace (per 100m)",
+      "swimPacePlaceholder": "e.g. 1:45",
+      "ftp": "Cycling FTP (watts)",
+      "ftpPlaceholder": "e.g. 220",
+      "runPaceLabel": "Run pace (per km)",
+      "runPacePlaceholder": "e.g. 4:30",
+      "errors": {
+        "experienceRequired": "Please select your experience level.",
+        "weeklyHoursRequired": "Please set your weekly training hours."
+      }
+    },
+    "step5": {
+      "title": "What's your goal race?",
+      "subtitle": "We'll build your plan backwards from your race date.",
+      "distanceLabel": "Race distance",
+      "distanceOptions": {
+        "sprint": "Sprint",
+        "sprintDesc": "750m / 20km / 5km",
+        "olympic": "Olympic",
+        "olympicDesc": "1.5km / 40km / 10km",
+        "half_ironman": "Half Ironman",
+        "half_ironmanDesc": "1.9km / 90km / 21.1km",
+        "ironman": "Ironman",
+        "ironmanDesc": "3.8km / 180km / 42.2km"
+      },
+      "raceNameLabel": "Race name",
+      "raceNamePlaceholder": "e.g. Ironman 70.3 San Juan",
+      "raceDateLabel": "Race date",
+      "priorityLabel": "Priority",
+      "priorityOptions": {
+        "A": "A Race — Peak for this event",
+        "B": "B Race — Good performance, not peaked",
+        "C": "C Race — Training/tune-up race"
+      },
+      "targetTimesLabel": "Target finish times (optional)",
+      "errors": {
+        "distanceRequired": "Please select a race distance.",
+        "raceNameRequired": "Race name is required.",
+        "raceDateRequired": "Race date is required.",
+        "raceDateFuture": "Race date must be in the future.",
+        "priorityRequired": "Please select a race priority."
+      }
+    },
+    "step6": {
+      "title": "When can you train?",
+      "subtitle": "We'll schedule sessions around your life.",
+      "daysLabel": "Available training days",
+      "days": {
+        "mon": "Mon",
+        "tue": "Tue",
+        "wed": "Wed",
+        "thu": "Thu",
+        "fri": "Fri",
+        "sat": "Sat",
+        "sun": "Sun"
+      },
+      "hoursPerDayLabel": "Hours available per day",
+      "timeOfDayLabel": "Preferred training time",
+      "timeOfDayOptions": {
+        "morning": "Morning (5–9 am)",
+        "lunch": "Lunch (11 am–1 pm)",
+        "afternoon": "Afternoon (3–6 pm)",
+        "evening": "Evening (6–9 pm)"
+      },
+      "errors": {
+        "daysRequired": "Select at least 2 training days.",
+        "hoursRequired": "Set hours per training day."
+      }
+    },
+    "step7": {
+      "title": "Connect your device",
+      "subtitle": "Auto-import workouts and keep your training load up to date.",
+      "garmin": "Garmin",
+      "garminDesc": "Forerunner, Fenix, Edge & more",
+      "wahoo": "Wahoo",
+      "wahooDesc": "ELEMNT, Bolt & KICKR",
+      "coros": "COROS",
+      "corosDesc": "PACE, APEX & VERTIX",
+      "connecting": "Connecting…",
+      "connected": "Connected",
+      "skipHint": "You can connect a device later in Settings.",
+      "skipButton": "Skip"
+    },
+    "step8": {
+      "title": "Your plan is ready!",
+      "subtitle": "Here's what we built for you.",
+      "planNameLabel": "Plan name",
+      "weeksLabel": "{n} weeks to race day",
+      "phasesTitle": "Training phases",
+      "firstWeekTitle": "Your first week",
+      "ctaDashboard": "Go to dashboard",
+      "phases": {
+        "base": "Base",
+        "build": "Build",
+        "peak": "Peak",
+        "taper": "Taper"
+      },
+      "saving": "Saving your plan…",
+      "saved": "Plan saved!"
+    }
+  },
+  "pricing": {
+    "title": "Simple, transparent pricing",
+    "subtitle": "Start free. Upgrade when you're ready to train smarter.",
+    "billingToggle": {
+      "monthly": "Monthly",
+      "annual": "Annual",
+      "saveLabel": "Save 33%"
+    },
+    "free": {
+      "name": "Free",
+      "price": "$0",
+      "description": "Core training calendar and basic nutrition tracking.",
+      "cta": "Current plan"
+    },
+    "premium": {
+      "name": "Premium",
+      "priceMonthly": "$9.99",
+      "priceAnnual": "$79.99",
+      "perMonth": "/ mo",
+      "billedAnnually": "Billed annually",
+      "description": "Full AI-powered training, nutrition, and analytics suite.",
+      "cta": "Start 7-day free trial",
+      "trialNote": "7-day free trial · No credit card required until trial ends · Cancel anytime"
+    },
+    "table": {
+      "feature": "Feature",
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "faq": [
+      {
+        "q": "Can I cancel anytime?",
+        "a": "Yes. You can cancel your subscription at any time through the billing portal. You will keep access until the end of your current billing period."
+      },
+      {
+        "q": "What happens after the free trial?",
+        "a": "After 7 days your card is charged. If you decide not to continue, cancel before the trial ends and you will not be billed."
+      },
+      {
+        "q": "Is TriFuel really vegan-first?",
+        "a": "Absolutely. Every food database entry, supplement recommendation, and meal suggestion is filtered to be 100% plant-based."
+      },
+      {
+        "q": "Do you support Garmin, Wahoo, and COROS?",
+        "a": "Yes. Connect your device in Settings → Devices and your completed workouts will sync automatically (Premium)."
+      }
+    ],
+    "upgrading": "Redirecting to checkout…",
+    "redirecting": "Opening billing portal…"
+  }
+}
