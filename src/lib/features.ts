@@ -34,11 +34,16 @@ export type Feature = (typeof FEATURES)[keyof typeof FEATURES]
 /** Every feature in this set requires premium. */
 const PREMIUM_FEATURES = new Set<Feature>(Object.values(FEATURES))
 
+/** When false, billing is disabled and every feature is unlocked for all users. */
+export const BILLING_ENABLED = process.env.ENABLE_BILLING === 'true'
+
 export function requiresPremium(feature: Feature): boolean {
+  if (!BILLING_ENABLED) return false
   return PREMIUM_FEATURES.has(feature)
 }
 
 export function canAccess(tier: 'free' | 'premium', feature: Feature): boolean {
+  if (!BILLING_ENABLED) return true
   if (tier === 'premium') return true
   return !requiresPremium(feature)
 }
