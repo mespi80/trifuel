@@ -1,7 +1,7 @@
 import type { NextRequest } from 'next/server'
 import { NextResponse } from 'next/server'
 import type Stripe from 'stripe'
-import { stripe } from '@/lib/stripe'
+import { getStripe } from '@/lib/stripe'
 import { upsertSubscriptionFromStripe } from '@/actions/subscription'
 
 // ── Stripe webhook secret ──────────────────────────────────────────────────────
@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
 
   let event: Stripe.Event
   try {
-    event = stripe.webhooks.constructEvent(body, signature, WEBHOOK_SECRET)
+    event = getStripe().webhooks.constructEvent(body, signature, WEBHOOK_SECRET)
   } catch (err) {
     console.error('[stripe webhook] signature verification failed:', err)
     return NextResponse.json({ error: 'Invalid signature' }, { status: 400 })
@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
         const session = event.data.object as Stripe.Checkout.Session
         if (session.mode !== 'subscription' || !session.subscription) break
 
-        const sub = await stripe.subscriptions.retrieve(session.subscription as string)
+        const sub = await getStripe().subscriptions.retrieve(session.subscription as string)
         await upsertSubscriptionFromStripe(
           sub.id,
           sub.customer as string,
@@ -100,7 +100,7 @@ export async function POST(req: NextRequest) {
         const subscriptionId = invoice.parent?.subscription_details?.subscription
         if (!subscriptionId) break
 
-        const sub = await stripe.subscriptions.retrieve(
+        const sub = await getStripe().subscriptions.retrieve(
           typeof subscriptionId === 'string' ? subscriptionId : subscriptionId.id
         )
         await upsertSubscriptionFromStripe(

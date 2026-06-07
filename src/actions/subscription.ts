@@ -4,7 +4,7 @@ import { auth } from '@/auth'
 import { db } from '@/db'
 import { subscriptions, users } from '@/db/schema'
 import { eq } from 'drizzle-orm'
-import { stripe } from '@/lib/stripe'
+import { getStripe } from '@/lib/stripe'
 import { revalidatePath } from 'next/cache'
 
 // ── Types ──────────────────────────────────────────────────────────────────────
@@ -85,7 +85,7 @@ export async function createCheckoutSession(
       where: eq(users.id, userId),
       columns: { name: true, email: true },
     })
-    const customer = await stripe.customers.create({
+    const customer = await getStripe().customers.create({
       email: userEmail ?? userRow?.email ?? undefined,
       name: userRow?.name ?? undefined,
       metadata: { userId },
@@ -102,7 +102,7 @@ export async function createCheckoutSession(
       })
   }
 
-  const checkout = await stripe.checkout.sessions.create({
+  const checkout = await getStripe().checkout.sessions.create({
     customer: stripeCustomerId,
     mode: 'subscription',
     line_items: [{ price: priceId, quantity: 1 }],
@@ -136,7 +136,7 @@ export async function createBillingPortalSession(
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000'
 
-  const portal = await stripe.billingPortal.sessions.create({
+  const portal = await getStripe().billingPortal.sessions.create({
     customer: sub.stripeCustomerId,
     return_url: `${baseUrl}/${lang}/dashboard/settings/subscription`,
   })
